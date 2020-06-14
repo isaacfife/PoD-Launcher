@@ -18,3 +18,7 @@ jobs:
       run: |
         cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
         .\MSBuild.exe "$Env:GITHUB_WORKSPACE\src\Path of Diablo Launcher\Path of Diablo Launcher.vbproj" -property:Configuration=Release
+
+    - uses: actions/upload-artifact@v2
+      with:
+      path: "$Env:GITHUB_WORKSPACE\src\Path of Diablo Launcher\bin\Release\Path of Diablo Launcher.exe"
